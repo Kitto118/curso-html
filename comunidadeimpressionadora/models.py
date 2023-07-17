@@ -20,6 +20,7 @@ class Usuario(database.Model, UserMixin):
     def contar_posts(self):
         return len(self.posts)
 
+
 class Post(database.Model):
     id = database.Column(database.Integer, primary_key=True)
     titulo = database.Column(database.String, nullable=False)
